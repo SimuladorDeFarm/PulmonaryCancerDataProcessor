@@ -9,6 +9,8 @@ matriz = cargar_archivo()
 
 #matriz = np.array([["2", "1", "0"], ["1", "0", "1"]])
 
-
+# valida los datos de la matriz sino lo elimina
 validarDto(matriz)
-#convertir(matriz)
+
+#convierte genero y diagnostico por 2 y 1
+convertir(matriz)

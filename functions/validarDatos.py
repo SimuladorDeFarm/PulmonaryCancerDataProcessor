@@ -24,6 +24,7 @@ def corroboraciones(dato, fila):
             print("ERROR: ", dato )
             error += 1
    
+    return error
 
 def validarDto(matriz):
 
@@ -35,17 +36,23 @@ def validarDto(matriz):
     #print(matriz[1][])
     i = 0
     j = 0
-    errores = 0
+
     while i < numFilas:
         j = 0
+        error = 0
         while j < numColumnas:
             
-            corroboraciones(matriz[i][j], i)
+            error =  corroboraciones(matriz[i][j], i)
+            if error == 1:
+                matriz = np.delete(matriz, j, axis=1)
+                numColumnas-=1
+
             j += 1
         i += 1
-    #print("errores totales: ",errores)
+  
+    numFilas = matriz.shape[0]
+    numColumnas = matriz.shape[1]
     print("filas:", numFilas)
     print("columnas:", numColumnas)
-    #tipo_columna = matriz[:, 1].dtype
-    #print(tipo_columna)
+
     
