@@ -4,7 +4,7 @@ from functions.validarDatos     import validarDto
 from functions.normalizar       import normalizar
 from functions.estandarizar     import estandarizar
 from functions.frecEdad         import frecEdad
-from functions.outlider         import graficar
+from functions.outlider         import outlider
 
 import numpy as np
 import pandas as pd

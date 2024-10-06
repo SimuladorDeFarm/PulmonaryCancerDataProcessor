@@ -33,3 +33,5 @@ def frecEdad(matriz):
     frecuenciasOut = np.delete(frecuencias, 0)
     #graficar(edades, frecuencias)
     graficar(edadesOut, frecuenciasOut)
+
+    
