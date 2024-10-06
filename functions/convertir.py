@@ -14,17 +14,18 @@ def convertir(matriz):
         while j < num_columnas:
             #matriz[i][0] = 1  # Asignar el valor 1 a cada elemento
             if matriz[i][0] == 'F':
-                matriz[i][0] = 1
+                matriz[i][0] = 2
             if matriz[i][0] == 'M':
-                matriz[i][0] = 0
+                matriz[i][0] = 1
             
             if matriz[i][15] == 'YES':
-                matriz[i][15] = 1
+                matriz[i][15] = 2
             if matriz[i][15] == 'NO':
-                matriz[i][15] = 0
+                matriz[i][15] = 1
             
             
             j += 1  # Incrementar columna
         i += 1  # Incrementar fila
 
     #print(matriz)
+    return matriz

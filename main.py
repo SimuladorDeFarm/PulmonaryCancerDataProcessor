@@ -1,6 +1,8 @@
 from functions.cargarArchivo    import cargar_archivo
 from functions.convertir        import convertir 
-from functions.validarDatos import validarDto
+from functions.validarDatos     import validarDto
+from functions.normalizar       import normalizar
+
 import numpy as np
 import pandas as pd
 
@@ -13,4 +15,7 @@ matriz = cargar_archivo()
 validarDto(matriz)
 
 #convierte genero y diagnostico por 2 y 1
-convertir(matriz)
+matriz = convertir(matriz)
+
+matrizNormalizada = matriz
+matrizNor = normalizar(matriz)
