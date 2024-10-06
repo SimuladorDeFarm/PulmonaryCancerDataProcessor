@@ -3,6 +3,8 @@ from functions.convertir        import convertir
 from functions.validarDatos     import validarDto
 from functions.normalizar       import normalizar
 from functions.estandarizar     import estandarizar
+from functions.frecEdad         import frecEdad
+from functions.outlider         import graficar
 
 import numpy as np
 import pandas as pd
@@ -22,8 +24,12 @@ print(matriz)
 matrizNormalizada = matriz
 matrizNor = normalizar(matriz)
 
-print("matriz normal:\n",matrizNor)
+#print("matriz normal:\n",matrizNor)
 
 
 matrizEst = estandarizar(matriz)
-print("matriz estandar:\n",matrizEst)
+#print("matriz estandar:\n",matrizEst)
+
+#frecEdad(matrizNor)
+
+outlider(matrizEst)
