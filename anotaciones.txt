@@ -128,6 +128,9 @@ uso de numpi
     funciones:
 
         normalizar_datos
+        estandarizar_datos
+
+4 graficar
 
 3 outliders
     funciones:
@@ -137,7 +140,7 @@ uso de numpi
 
     
 
-
+ 
 
         
 

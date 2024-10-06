@@ -32,5 +32,5 @@ def normalizar(matriz):
     #print("Matriz final: ", matriz_final)
     #print("numero menor: ", matrizMinCon)
     #print("numero mayor: ", matrizMaxCon)
-
+    matriz_final = np.transpose(matriz_final)
     return matriz_final

@@ -2,10 +2,10 @@ from functions.cargarArchivo    import cargar_archivo
 from functions.convertir        import convertir 
 from functions.validarDatos     import validarDto
 from functions.normalizar       import normalizar
+from functions.estandarizar     import estandarizar
 
 import numpy as np
 import pandas as pd
-
 
 matriz = cargar_archivo()
 
@@ -17,5 +17,13 @@ validarDto(matriz)
 #convierte genero y diagnostico por 2 y 1
 matriz = convertir(matriz)
 
+print(matriz)
+
 matrizNormalizada = matriz
 matrizNor = normalizar(matriz)
+
+print("matriz normal:\n",matrizNor)
+
+
+matrizEst = estandarizar(matriz)
+print("matriz estandar:\n",matrizEst)
