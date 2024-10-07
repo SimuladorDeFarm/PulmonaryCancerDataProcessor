@@ -34,7 +34,7 @@ def obtenerOutlider(arreglo_estandarizado):
     
 
 
-def outliderV2(matriz):
+def outliderV2(matriz, matrizOriginal):
     
 
     num_filas = matriz.shape[0]
@@ -49,9 +49,11 @@ def outliderV2(matriz):
     fila = matriz[:, i:i+1]
     indices_a_eliminar = obtenerOutlider(fila)
     matriz_sin_outliders = np.delete(matriz, indices_a_eliminar, axis=0)
-    
+    matrizOriginalSinOutliders = np.delete(matriz, indices_a_eliminar, axis=0)
+
+
     #print(indices_a_eliminar)
     #print(matriz_sin_columnas.shape[0], matriz_sin_columnas.shape[1])
     #print(matriz_sin_outliders)
    
-    return matriz_sin_outliders
+    return matriz_sin_outliders, matrizOriginalSinOutliders

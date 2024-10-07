@@ -33,5 +33,10 @@ matrizEst = estandarizar(matriz)
 
 #frecEdad(matrizNor)
 
-matrizEstSinOutliders = outliderV2(matrizEst)
-#print(matrizEstSinOutliders)
+matrizEstSinOutliders, matriz = outliderV2(matrizEst, matriz)
+
+print(matriz)
+print("filas(original, estandar):",matriz.shape[0], matrizEstSinOutliders.shape[0] )
+print("columnas(original, estandar):", matriz.shape[1], matrizEstSinOutliders.shape[1] )
+
+

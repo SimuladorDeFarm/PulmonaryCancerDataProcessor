@@ -141,8 +141,32 @@ uso de numpi
     
 
  
+variables clave
 
-        
+Edad:
+
+    Justificación: La edad es un factor de riesgo conocido y podría mostrar una tendencia clara en los pacientes con cáncer de pulmón.
+
+Fumar:
+
+    justifiacion: oes obvio no?
+
+Dedos amarillos:
+
+    Justificación: Esta variable es un indicador directo del consumo de tabaco, que es el factor de riesgo más significativo para el cáncer de pulmón.
+
+
+Enfermedad crónica:
+
+    Justificación: La presencia de comorbilidades podría indicar un mayor riesgo de desarrollar cáncer.
+
+Dificultad para respirar y dolor de pecho:
+
+    Justificación: Estos síntomas son característicos de problemas pulmonares graves y pueden ser indicadores tempranos de la enfermedad.
+
+Consumo de alcohol (como variable indirecta):
+
+    Justificación: Aunque no es un factor de riesgo primario, podría correlacionarse con otros factores de estilo de vida.        
 
 
 
