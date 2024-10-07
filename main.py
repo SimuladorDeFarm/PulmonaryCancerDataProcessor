@@ -4,7 +4,8 @@ from functions.validarDatos     import validarDto
 from functions.normalizar       import normalizar
 from functions.estandarizar     import estandarizar
 from functions.frecEdad         import frecEdad
-from functions.outlider         import outlider
+from functions.outlider         import obtenerOutlider
+from functions.outlider         import outliderV2
 
 import numpy as np
 import pandas as pd
@@ -19,7 +20,7 @@ validarDto(matriz)
 #convierte genero y diagnostico por 2 y 1
 matriz = convertir(matriz)
 
-print(matriz)
+
 
 matrizNormalizada = matriz
 matrizNor = normalizar(matriz)
@@ -32,4 +33,5 @@ matrizEst = estandarizar(matriz)
 
 #frecEdad(matrizNor)
 
-outlider(matrizEst)
+matrizEstSinOutliders = outliderV2(matrizEst)
+#print(matrizEstSinOutliders)

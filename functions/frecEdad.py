@@ -1,7 +1,20 @@
 import numpy as np
 from functions.graficar import graficar 
 
+def frec1d(arreglo):
+    
+    
+    valores_unicos, conteos = np.unique(arreglo, return_counts=True)
 
+    # Crear un arreglo de frecuencias como una tupla de (valor, frecuencia)
+    frecuencias = np.column_stack((valores_unicos, conteos))
+
+    # Ordenar el arreglo de frecuencias por el primer elemento (valor)
+    frecuencias = frecuencias[frecuencias[:, 0].argsort()]
+     
+
+
+    return frecuencias
 
 def frecEdad(matriz):
 

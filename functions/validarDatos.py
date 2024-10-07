@@ -52,7 +52,7 @@ def validarDto(matriz):
   
     numFilas = matriz.shape[0]
     numColumnas = matriz.shape[1]
-    print("filas:", numFilas)
-    print("columnas:", numColumnas)
+    #print("filas:", numFilas)
+    #print("columnas:", numColumnas)
 
     
