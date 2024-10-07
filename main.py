@@ -8,13 +8,16 @@ from functions.outlider         import obtenerOutlider
 from functions.outlider         import outliderV2
 from functions.medidasTendenciaCentral import medidasTendenciaCentral
 from functions.medidasDispercion        import medidasDispercion
+from functions.frecuencia       import frecuencia
+
 import numpy as np
 import pandas as pd
 
 
+
+#carga el archivo en una matriz numpy
 matriz = cargar_archivo()
 
-#matriz = np.array([["2", "1", "0"], ["1", "0", "1"]])
 
 # valida los datos de la matriz sino lo elimina
 validarDto(matriz)
@@ -23,34 +26,30 @@ validarDto(matriz)
 matriz = convertir(matriz)
 
 
-
+#normaliza matriz original
 matrizNormalizada = matriz
 matrizNor = normalizar(matriz)
 
-#print("matriz normal:\n",matrizNor)
-
-
+#estadnariza matriz original
 matrizEst = estandarizar(matriz)
-#print("matriz estandar:\n",matrizEst)
 
-#frecEdad(matrizNor)
-
+#elimina los outliders de la matriz estandar, normal y original
 matrizEstSinOutliders, matrizOrSinOuliders = outliderV2(matrizEst, matriz)
 trash, matrizNorSinOuliders =  outliderV2(matrizEst, matrizNor)
 
-#print(matriz)
-#print("filas(original, estandar):",matriz.shape[0], matrizEstSinOutliders.shape#[0] )
-#print("columnas(original, estandar):", matriz.shape[1], matrizEstSinOutliders.#shape[1] )
+#tea de presision al imprimir numpy
 np.set_printoptions(threshold=np.inf)
-
 #np.set_printoptions(precision=2, suppress=True)
 
+#obiene medidas de tendencia central
 #tendenciaCentral= medidasTendenciaCentral(matrizEstSinOutliders)
 
-medidasDispercion(matrizOrSinOuliders)
+#cambia el foramto de impresion 
+np.set_printoptions(suppress=True, precision=2)
 
-#print("medias:",tendenciaCentral[0])
-#print("medianas",tendenciaCentral[1])
-#print("modas",tendenciaCentral[2])
-#print(matrizNorSinOuliders)
 
+#medidas de dispercion
+medidasDispercion = medidasDispercion(matrizOrSinOuliders)
+#print(medidasDispercion)
+
+graficarTodo()

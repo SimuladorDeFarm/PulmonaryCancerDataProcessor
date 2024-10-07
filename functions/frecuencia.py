@@ -10,6 +10,6 @@ def frecuencia(array):
         frecuencias = np.flip(frecuencias)
 
 
-    print(valores_unicos, frecuencias)
+    #print(valores_unicos, frecuencias)
     return frecuencias
 

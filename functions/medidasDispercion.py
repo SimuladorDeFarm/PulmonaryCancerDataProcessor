@@ -5,7 +5,7 @@ from functions.frecuencia import frecuencia
 def medidasDispercion(matriz):
 
     #crea un vector de 5 columnas y 16 filas
-    dispercion = np.full((16, 5), 0).astype(float)
+    dispercion = np.full((5, 16), 0).astype(float)
 
     #captura cantidad de columnas
     nColumnas = matriz.shape[1]
@@ -27,10 +27,11 @@ def medidasDispercion(matriz):
             varianza = np.var(vector)
             rango = np.max(vector) - np.min(vector)
             coefVar = desEstandar / media
+            #print("[EDADES]")
         else: 
             #cacula la frecuencia de los datos binarios en roden [1, 2]
             vector_frecuencia = frecuencia(vector)
-            vector_frecuencia = vector_frecuencia[1]
+            #vector_frecuencia = vector_frecuencia[1]
             media = np.mean(vector_frecuencia)
             desEstandar = np.std(vector_frecuencia)
             varianza = np.var(vector_frecuencia)
@@ -38,18 +39,31 @@ def medidasDispercion(matriz):
             coefVar = desEstandar / media
         
 
-        dispercion[i][0] = media
-        dispercion[i][1] = desEstandar
-        dispercion[i][2] = varianza
-        dispercion[i][3] = rango
-        dispercion[i][4] = coefVar 
+        dispercion[0][i] = media
+        dispercion[1][i] = desEstandar
+        dispercion[2][i] = varianza
+        dispercion[3][i] = rango
+        dispercion[4][i] = coefVar 
+
+        #print(f"Media de las frecuencias: {media:.2f}")
+        #print(f"Desviación estándar de las frecuencias: {desEstandar:.2f}")
+        #print(f"Varianza de las frecuencias: {varianza:.2f}")
+        #print(f"Rango de las frecuencias: {rango}")
+        #print(f"Coeficiente de variación: {coefVar:.2f}")
+
+        #print(f"Media de las frecuencias: {dispercion[0][i]:.2f}")
+        #print(f"Desviación estándar de las frecuencias: {dispercion[1][i]:.2f}")
+        #print(f"Varianza de las frecuencias: {dispercion[2][i]:.2f}")
+        #print(f"Rango de las frecuencias: {dispercion[3][i]}")
+        #print(f"Coeficiente de variación: {dispercion[4][i]:.2f}")
         
         i+=1
-
-    print(f"Media: {dispercion[:][0]}")
-    print(f"Desviación estándar: {dispercion[:][1]}")
-    print(f"Varianza : {dispercion[:][2]}")
-    print(f"Rango : {dispercion[:][3]}")
-    print(f"Coeficiente de variación: {dispercion[:][4]}")
+    
+    return dispercion
+    #print(f"Media: {dispercion[:][0]}")
+    #print(f"Desviación estándar: {dispercion[:][1]}")
+    #print(f"Varianza : {dispercion[:][2]}")
+    #print(f"Rango : {dispercion[:][3]}")
+    #print(f"Coeficiente de variación: {dispercion[:][4]}")
     #print(f"Frecuencia de '1' en cada columna: {frecuencia_de_1}")
 

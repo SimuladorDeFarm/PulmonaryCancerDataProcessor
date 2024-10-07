@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
 from scipy.stats import norm
+
 from functions.graficar import graficar 
 from functions.frecEdad import frec1d
 
