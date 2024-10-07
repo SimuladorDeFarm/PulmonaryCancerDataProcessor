@@ -7,7 +7,7 @@ from functions.frecEdad         import frecEdad
 from functions.outlider         import obtenerOutlider
 from functions.outlider         import outliderV2
 from functions.medidasTendenciaCentral import medidasTendenciaCentral
-
+from functions.medidasDispercion        import medidasDispercion
 import numpy as np
 import pandas as pd
 
@@ -45,7 +45,9 @@ np.set_printoptions(threshold=np.inf)
 
 #np.set_printoptions(precision=2, suppress=True)
 
-tendenciaCentral= medidasTendenciaCentral(matrizEstSinOutliders)
+#tendenciaCentral= medidasTendenciaCentral(matrizEstSinOutliders)
+
+medidasDispercion(matrizOrSinOuliders)
 
 #print("medias:",tendenciaCentral[0])
 #print("medianas",tendenciaCentral[1])
