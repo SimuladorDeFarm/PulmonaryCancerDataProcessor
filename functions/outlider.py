@@ -49,7 +49,7 @@ def outliderV2(matriz, matrizOriginal):
     fila = matriz[:, i:i+1]
     indices_a_eliminar = obtenerOutlider(fila)
     matriz_sin_outliders = np.delete(matriz, indices_a_eliminar, axis=0)
-    matrizOriginalSinOutliders = np.delete(matriz, indices_a_eliminar, axis=0)
+    matrizOriginalSinOutliders = np.delete(matrizOriginal, indices_a_eliminar, axis=0)
 
 
     #print(indices_a_eliminar)

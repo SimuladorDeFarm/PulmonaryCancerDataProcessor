@@ -6,9 +6,11 @@ from functions.estandarizar     import estandarizar
 from functions.frecEdad         import frecEdad
 from functions.outlider         import obtenerOutlider
 from functions.outlider         import outliderV2
+from functions.medidasTendenciaCentral import medidasTendenciaCentral
 
 import numpy as np
 import pandas as pd
+
 
 matriz = cargar_archivo()
 
@@ -33,10 +35,20 @@ matrizEst = estandarizar(matriz)
 
 #frecEdad(matrizNor)
 
-matrizEstSinOutliders, matriz = outliderV2(matrizEst, matriz)
+matrizEstSinOutliders, matrizOrSinOuliders = outliderV2(matrizEst, matriz)
+trash, matrizNorSinOuliders =  outliderV2(matrizEst, matrizNor)
 
-print(matriz)
-print("filas(original, estandar):",matriz.shape[0], matrizEstSinOutliders.shape[0] )
-print("columnas(original, estandar):", matriz.shape[1], matrizEstSinOutliders.shape[1] )
+#print(matriz)
+#print("filas(original, estandar):",matriz.shape[0], matrizEstSinOutliders.shape#[0] )
+#print("columnas(original, estandar):", matriz.shape[1], matrizEstSinOutliders.#shape[1] )
+np.set_printoptions(threshold=np.inf)
 
+#np.set_printoptions(precision=2, suppress=True)
+
+tendenciaCentral= medidasTendenciaCentral(matrizEstSinOutliders)
+
+#print("medias:",tendenciaCentral[0])
+#print("medianas",tendenciaCentral[1])
+#print("modas",tendenciaCentral[2])
+#print(matrizNorSinOuliders)
 
