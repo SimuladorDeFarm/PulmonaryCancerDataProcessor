@@ -39,12 +39,12 @@ def frecEdad(matriz):
     media = np.mean(matrizNorEdad)
     desviacion_estandar = np.std(matrizNorEdad)
 
-    print(media)
-    print(desviacion_estandar)
+    #print(media)
+    #print(desviacion_estandar)
 
     edadesOut = np.delete(edades, 0)
     frecuenciasOut = np.delete(frecuencias, 0)
-    #graficar(edades, frecuencias)
-    graficar(edadesOut, frecuenciasOut)
+    graficar(edad, frecuencia)
+    #graficar(edadesOut, frecuenciasOut)
 
     

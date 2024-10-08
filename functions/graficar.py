@@ -3,22 +3,29 @@ from scipy.stats import norm
 
 import numpy as np
 
-def graficar(vector):
+def flec(edades):
+    return  np.unique(edades, return_counts=True)
 
-    Y = vector[:, 1]
-    X = vector[:, 0]
+
+def graficar(vector):
+    
+    vector2 = vector[:, 1:2]
+    X, Y = flec(vector2)
+
+    #Y = vector[:, 1]
+    #X = vector[:, 0]
     # Crear el gráfico de líneas
     
     
-    #X = X[:, np.newaxis]
-    #Y = Y[:, np.newaxis]
+    X = X[:, np.newaxis]
+    Y = Y[:, np.newaxis]
     
     plt.plot(X, Y, marker='o', linestyle='-', color='b', label='Y de edades')
 
     # Añadir etiquetas y título
-    plt.xlabel('x')
-    plt.ylabel('Y')
-    plt.title('y vs x')
+    plt.xlabel('edades')
+    plt.ylabel('Frecuencia')
+    plt.title('Frecuencia vs edades')
 
     # Generar la curva de distribución normal teórica para comparar
     x = np.linspace(0, 1, 100)

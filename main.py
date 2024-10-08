@@ -4,11 +4,14 @@ from functions.validarDatos     import validarDto
 from functions.normalizar       import normalizar
 from functions.estandarizar     import estandarizar
 from functions.frecEdad         import frecEdad
+from functions.frecEdad         import frec1d
 from functions.outlider         import obtenerOutlider
 from functions.outlider         import outliderV2
 from functions.medidasTendenciaCentral import medidasTendenciaCentral
 from functions.medidasDispercion        import medidasDispercion
 from functions.frecuencia       import frecuencia
+from functions.graficarTodo     import graficarTodo
+from functions.graficar         import graficar
 
 import numpy as np
 import pandas as pd
@@ -48,8 +51,10 @@ np.set_printoptions(threshold=np.inf)
 np.set_printoptions(suppress=True, precision=2)
 
 
+
 #medidas de dispercion
-medidasDispercion = medidasDispercion(matrizOrSinOuliders)
+#medidasDispercion = medidasDispercion(matrizOrSinOuliders)
 #print(medidasDispercion)
 
-graficarTodo()
+#genera grafico normal de edades
+#graficar(matrizEstSinOutliders)

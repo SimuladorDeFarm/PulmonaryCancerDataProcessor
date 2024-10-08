@@ -11,5 +11,5 @@ def frecuencia(array):
 
 
     #print(valores_unicos, frecuencias)
-    return frecuencias
+    return frecuencias, valores_unicos
 
