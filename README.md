@@ -6,7 +6,7 @@ python script that procces database
 
 ### Windows
 
-#### Witout consol
+#### Without consol
 
 Download the repository and doble-clik on `install_windows_script.sh`
 
