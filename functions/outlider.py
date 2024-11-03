@@ -6,7 +6,8 @@ from functions.graficar import graficar
 from functions.frecEdad import frec1d
 
 def obtenerOutlider(arreglo_estandarizado):
-    
+   
+
     #toma solo als edades
     #arreglo_estandarizado = matriz[:, 1:2 ]
 
@@ -26,6 +27,7 @@ def obtenerOutlider(arreglo_estandarizado):
 
     # Mostrar resultados
     #print(f"Arreglo original: {arreglo_estandarizado}")
+    
     #print(f"Límite inferior: {limite_inferior}, Límite superior: {limite_superior}")
     #print(f"Outliers encontrados en los índices: {indices_outliers}")
     #print(f"Arreglo sin outliers: {arreglo_sin_outliers}")

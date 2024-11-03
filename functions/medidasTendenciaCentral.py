@@ -34,8 +34,8 @@ def medidasTendenciaCentral(matriz):
 
 
         # Mostrar resultados
-        #print(f"Media: {media}")
-        #print(f"Mediana: {mediana}")
+        print(f"Media: {media}")
+        print(f"Mediana: {mediana}")
         print(f"Moda: {moda}")
         np.set_printoptions(precision=2, suppress=True)
 

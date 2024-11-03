@@ -11,7 +11,7 @@ def graficar(vector):
     
     vector2 = vector[:, 1:2]
     X, Y = flec(vector2)
-
+    print(X,Y)
     #Y = vector[:, 1]
     #X = vector[:, 0]
     # Crear el gráfico de líneas

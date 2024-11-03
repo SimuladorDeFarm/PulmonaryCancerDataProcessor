@@ -45,11 +45,11 @@ def medidasDispercion(matriz):
         dispercion[3][i] = rango
         dispercion[4][i] = coefVar 
 
-        #print(f"Media de las frecuencias: {media:.2f}")
-        #print(f"Desviación estándar de las frecuencias: {desEstandar:.2f}")
-        #print(f"Varianza de las frecuencias: {varianza:.2f}")
-        #print(f"Rango de las frecuencias: {rango}")
-        #print(f"Coeficiente de variación: {coefVar:.2f}")
+        print(f"Media de las frecuencias: {media:.2f}")
+        print(f"Desviación estándar de las frecuencias: {desEstandar:.2f}")
+        print(f"Varianza de las frecuencias: {varianza:.2f}")
+        print(f"Rango de las frecuencias: {rango}")
+        print(f"Coeficiente de variación: {coefVar:.2f}")
 
         #print(f"Media de las frecuencias: {dispercion[0][i]:.2f}")
         #print(f"Desviación estándar de las frecuencias: {dispercion[1][i]:.2f}")

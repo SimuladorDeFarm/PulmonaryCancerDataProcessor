@@ -59,8 +59,8 @@ def graficarTodo(matriz):
             
             # [1, 2]
             vector_fre, valores_unicos = frecuencia(vector)
-            #print(vector_fre, valores_unicos)
-            #print(vector_fre, valores_unicos)
+            print(vector_fre, valores_unicos)
+            
             plt.bar(valores_unicos, vector_fre, color=['blue', 'orange'], width=0.4)
 
             plt.xticks(valores_unicos, ['No', 'si'])
@@ -74,9 +74,9 @@ def graficarTodo(matriz):
             #plt.show()
             #plt.savefig(f"graficos/{nombreEjey(i)}")
         else:
-            print(vector)
+            #print(vector)
             vector_fre, valores_unicos = frecedades(vector)
             #matriz_comb = np.column_stack((valores_unicos, vector_fre))
             #graficar(matriz_comb)
-            print( frecedades)
+            #print( frecedades)
         i+=1
