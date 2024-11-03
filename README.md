@@ -8,7 +8,7 @@ python script that procces database
 
 #### Witout consol
 
-Downloead the repository and doble-clik on `install_windows_script.sh`
+Download the repository and doble-clik on `install_windows_script.sh`
 
 #### Consol
 
